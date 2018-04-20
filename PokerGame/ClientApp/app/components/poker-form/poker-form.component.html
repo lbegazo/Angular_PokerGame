@@ -1,10 +1,60 @@
+
 <div class="container">
     <header class="jumbotron colorPanel">
         <div class="row text-center">
             <h1>Welcome to Poker Game</h1>
             <p>
-                <button id="btnNewGameFirst" class="btn btn-success btn-lg">New Game</button>
+                <button id="btnNewGameFirst" class="btn btn-success btn-lg" (click)="onNewGame()">New Game</button>
             </p>
         </div>
     </header>
+    <div class="row text-center">
+        <div class="row text-center" style="display: flex;flex-wrap: wrap;">
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 col-md-offset-1">
+                <img class="img-responsive" [src]="card1" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">                
+                <img class="img-responsive" [src]="card2" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+                <img class="img-responsive" [src]="card3" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+                <img class="img-responsive" [src]="card4" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+                <img class="img-responsive" [src]="card5" />
+            </div>
+        </div>
+        <div style="height:30px">
+        </div>
+        <div class="row text-center colorPanel" style="width:100%;">
+            <h2>Summary</h2>
+            <form class="form-inline">
+                <div class="form-group">                    
+                    <p><span><strong>How many pairs are there?</strong></span></p>
+                    <p id="controlPair" class="form-control">{{controlPair}}</p>
+                </div>
+                <div class="form-group">                    
+                    <p><span><strong>Is there a three of kind?</strong></span></p>
+                    <p id="controlThree" class="form-control">{{controlThree}}</p>
+                </div>
+                <div class="form-group">
+                    <label for="lblLadder"></label>
+                    <p><span><strong>Is there a ladder?</strong></span></p>                    
+                    <p id="controlLadder" class="form-control">{{controlLadder}}</p>
+                </div>
+                <div class="form-group">
+                    <p><span><strong>Is there a pocker?</strong></span></p>                    
+                    <p id="controlPocker" class="form-control">{{controlPocker}}</p>
+                </div>
+                <div class="form-group">
+                    <p><span><strong>Is there a color?</strong></span></p>                    
+                    <p id="controlColor" class="form-control">{{controlColor}}</p>
+                </div>
+                <div style="height:30px">
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

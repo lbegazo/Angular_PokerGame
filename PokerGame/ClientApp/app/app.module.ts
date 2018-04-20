@@ -10,7 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { PokerFormComponent } from './components/poker-form/poker-form.component';
-
+import { CardService } from './services/card.service';
 
 @NgModule({
     declarations: [
@@ -33,7 +33,10 @@ import { PokerFormComponent } from './components/poker-form/poker-form.component
             { path: 'fetch-data', component: FetchDataComponent },
             { path: '**', redirectTo: 'home' }
         ])
+    ],
+    providers: [
+        CardService
     ]
 })
-export class AppModuleShared {
+export class AppModule {
 }
